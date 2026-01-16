@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  password      String // Hashed
+  name          String?
+  image         String?
+  createdAt     DateTime  @default(now())
+  profile       Profile?
+  sessions      Session[]
+}
+
+model Profile {
+  id            String    @id @default(uuid())
+  userId        String    @unique
+  user          User      @relation(fields: [userId], references: [id])
+  age           Int?
+  gender        String?
+  hasGlasses    Boolean?
+  lastExamDate  DateTime?
+  updatedAt     DateTime  @updatedAt
+}
+
+model Session {
+  id              String      @id @default(uuid())
+  userId          String
+  user            User        @relation(fields: [userId], references: [id])
+  calibrationPxMm Float?
+  createdAt       DateTime    @default(now())
+  
+  // V2 Fields
+  visionScore     Int?        // 0-100
+  reliability     Int?        // 0-100
+  mode            String      @default("STANDARD") // "STANDARD", "CHILD", "PRO"
+  lighting        String?
+  
+  trials          Trial[]
+  prediction      Prediction?
+}
+
+model Trial {
+  id            String   @id @default(uuid())
+  sessionId     String
+  session       Session  @relation(fields: [sessionId], references: [id])
+  eye           String   // "LEFT", "RIGHT"
+  stimulus      String   // "E", "C", "A"
+  blurLevel     Float    // LogMAR
+  response      Boolean
+  
+  // V2 Fields
+  reactionTime  Int?     // ms
+  contrastLevel Float?   // 1.0 = 100%
+  
+  timestamp     DateTime @default(now())
+}
+
+model Prediction {
+  id          String   @id @default(uuid())
+  sessionId   String   @unique
+  session     Session  @relation(fields: [sessionId], references: [id])
+  leftEyeEst  String
+  rightEyeEst String
+  confidence  String
+}
