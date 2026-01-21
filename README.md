@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Iris Vision 👁️🚀
 
-## Getting Started
+Iris Vision is an AI-powered web application focused on intelligent image analysis and computer vision. The platform provides a modern, responsive, and scalable interface to interact with vision-based models and explore real-world AI use cases such as object detection, image classification, and visual insights.
 
-First, run the development server:
+🌐 Live Website: https://iris-vision.vercel.app  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The goal of Iris Vision is to bridge the gap between advanced Computer Vision models and user-friendly web applications. It is designed to be fast, visually clean, and extensible, making it suitable for research demos, learning projects, and real-world AI product prototypes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project demonstrates:
+- Integration of AI/ML with modern web technologies  
+- Clean UI/UX for technical applications  
+- Scalable deployment using cloud platforms  
+- Production-style project structure  
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🔥 Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- AI-based visual processing and analysis  
+- Upload and preview images in real time  
+- Responsive design for desktop, tablet, and mobile  
+- Modular codebase for easy extension  
+- Optimized performance with modern frontend stack  
+- Deployed on Vercel for high availability  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧰 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend:** Next.js / React  
+- **Styling:** Tailwind CSS  
+- **Backend / APIs:** Node.js (if applicable)  
+- **AI / ML:** Computer Vision models (custom trained or API-based)  
+- **Deployment:** Vercel  
+- **Version Control:** Git & GitHub  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*(You can refine this section with exact versions and models later.)*
+
+---
+
+## 📂 Project Structure
+
